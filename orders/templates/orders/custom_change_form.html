@@ -1,0 +1,11 @@
+{% extends 'admin/change_form.html' %}
+
+{% block submit_buttons_bottom %}
+    {{ block.super }}
+    <div class="submit-row">
+        <input type="submit" value="Approve" name="_approve" class="default" style="background-color: rgb(30, 124, 51);"/>
+        <input type="submit" value="Reject" name="_reject" class="default" style="background-color: rgb(199, 35, 51);"/>
+        <input type="submit" value="Return" name="_return" class="default" style="background-color: rgb(246, 246, 2);"/>
+        <input type="submit" value="Mark as Paid" name="_mark_as_paid" class="default" style="background-color: rgb(30, 124, 51);"/>
+    </div>
+{% endblock %}

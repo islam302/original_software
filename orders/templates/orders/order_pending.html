@@ -1,0 +1,1062 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Your Email</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- Mobile tweak: supported by many clients -->
+    <style>
+      /* Only simple queries; some Outlook versions ignore this */
+      @media screen and (max-width: 600px) {
+        .container {
+          width: 100% !important;
+        }
+        .p-24 {
+          padding: 16px !important;
+        }
+        .stack {
+          display: block !important;
+          width: 100% !important;
+        }
+      }
+      /* Hide preheader preview text */
+      .preheader {
+        display: none !important;
+        visibility: hidden;
+        opacity: 0;
+        color: transparent;
+        height: 0;
+        width: 0;
+        overflow: hidden;
+      }
+    </style>
+  </head>
+  <body
+    style="margin: 0; padding: 0; background: #f5f7fa; padding-bottom: 20px"
+  >
+    <!-- Full-width wrapper  -->
+    <table
+      role="presentation"
+      aria-hidden="true"
+      cellpadding="0"
+      cellspacing="0"
+      width="100%"
+      style="background: #f5f7fa"
+    >
+      <tr>
+        <td style="padding: 24px; align-items: center; align-self: center">
+          <table
+            role="presentation"
+            class="container"
+            cellpadding="0"
+            cellspacing="0"
+            width="800"
+            style="
+              border: 0px;
+              width: 800px;
+              max-width: 800px;
+              background: #ffffff;
+              border-collapse: collapse;
+              padding-bottom: 20px;
+              margin-left: auto;
+              margin-right: auto;
+              direction: rtl;
+            "
+          >
+            <tr>
+              <td style="text-align: center; align-content: center">
+                <img
+                  src="https://api.original-software.project1.company/media/files/copyd70ea9753d464fb29d21be32221585b7.png"
+                  width="400"
+                  height="400"
+                  alt="Company"
+                  style="
+                    display: block;
+                    width: 400px;
+                    height: auto;
+                    border: 0;
+                    outline: none;
+                    text-decoration: none;
+                    margin-left: auto;
+                    margin-right: auto;
+                  "
+                />
+              </td>
+            </tr>
+            <tr>
+              <td
+                class="p-24"
+                style="
+                  padding: 24px;
+                  font-family: Arial, Helvetica, sans-serif;
+                  color: #111111;
+                "
+              >
+                <h1
+                  style="
+                    margin: 0 0 12px;
+                    font-size: 34px;
+                    line-height: 28px;
+                    font-weight: bold;
+                    color: #c18d56;
+                    width: 100%;
+                    text-align: center;
+                  "
+                >
+                  تم استلام طلبك بنجاح
+                </h1>
+              </td>
+            </tr>
+            <tr>
+              <td class="p-24" style="padding: 0px 24px 0px 12px">
+                <table
+                  role="presentation"
+                  width="100%"
+                  cellpadding="0"
+                  cellspacing="0"
+                  style="border: 0px; width: 100%; max-width: 100%"
+                >
+                  <tr>
+                    <td
+                      class="stack"
+                      width="50%"
+                      valign="top"
+                      style="
+                        font-family: Arial, Helvetica, sans-serif;
+                        color: #111111;
+                        padding-right: 12px;
+                      "
+                    >
+                      <h2
+                        style="
+                          margin: 0 0 8px;
+                          font-size: 28px;
+                          line-height: 24px;
+                          margin-left: 100px;
+                        "
+                      >
+                        مرحبا {{ username }},
+                      </h2>
+                    </td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+
+            <tr>
+              <td
+                style="
+                  padding-top: 12px;
+                  font-family: Arial, Helvetica, sans-serif;
+                  color: #111111;
+                  max-width: 400px;
+                "
+              >
+                <h2
+                  style="
+                    margin: 0 0 12px;
+                    font-size: 20px;
+                    line-height: 28px;
+
+                    color: #000000;
+                    width: 100%;
+                    text-align: center;
+                    font-weight: 400;
+                  "
+                >
+                  حبينا نبلغك أن طلبك معنا وصل بنجاح!
+                  <br />
+                  ونحن الآن نراجع التفاصيل ونتأكد من كل شيء.
+                  <br />
+                  حتى تضمن استلام المنتج الأصلي بأعلى جودة
+                </h2>
+              </td>
+            </tr>
+            <!-- <tr>
+              <td
+                style="
+                  font-family: Arial, Helvetica, sans-serif;
+                  color: #111111;
+                  max-width: 400px;
+                "
+              >
+                <h2
+                  style="
+                    font-size: 20px;
+                    line-height: 28px;
+                    color: #000000;
+                    text-align: center;
+                    font-weight: 400;
+                    margin-bottom: 5px;
+                    padding-left: 40px;
+                    padding-right: 40px;
+                  "
+                >
+                  نود إبلاغك بأنه قد تم قبول طلبك بنجاح .
+                  <br />
+                  وجاري الآن تنفيذ عملية تجهيز الترخيص الخاص بك
+                  <br />
+                </h2>
+              </td>
+            </tr> -->
+            <tr>
+              <td>
+                <table>
+                  <tr>
+                    <td>
+                      <h4
+                        style="
+                          margin-right: 130px;
+                          font-size: 24px;
+                          margin-top: 30px;
+                          margin-bottom: 10px;
+                        "
+                      >
+                        تفاصيل مختصرة عن طلبك:
+                      </h4>
+                    </td>
+                  </tr>
+                  {% for item in order_lines %}
+                  <tr>
+                    <td style="margin-right: 130px; font-size: 20px">
+                      <!-- make each one a full line -->
+                      <h4 style="margin: 5px; margin-right: 130px">
+                        اسم المنتج: {{ item.product.name }}
+                      </h4>
+                      <h4 style="margin: 5px; margin-right: 130px">
+                        الحالة: قيد المراجعة
+                      </h4>
+                    </td>
+                  </tr>
+                  {% endfor %}
+                </table>
+              </td>
+            </tr>
+
+            <tr>
+              <td
+                style="
+                  font-family: Arial, Helvetica, sans-serif;
+                  color: #111111;
+                  max-width: 400px;
+                "
+              >
+                <h2
+                  style="
+                    font-size: 20px;
+                    line-height: 28px;
+                    color: #000000;
+                    width: 100%;
+                    text-align: center;
+                    font-weight: 400;
+                  "
+                >
+                  بعد التأكيد النهائي ومعالجة الدفع،.
+                  <br />
+                  رح يصلك كود التفعيل الاصلي مع خطوات التثبيت بالتفصيل
+                  <br />
+                  تقدر تتابع حالة طلبك دائمًا من خلال حسابك في الموقع بقسم "طلباتي".
+                </h2>
+              </td>
+            </tr>
+
+            <tr>
+              <td
+                style="
+                  font-family: Arial, Helvetica, sans-serif;
+                  color: #111111;
+                  direction: rtl;
+                  max-width: 400px;
+                  margin-left: auto;
+                  margin-right: auto;
+                  display: flex;
+                  margin-top: 80px;
+                "
+              >
+                <img
+                  src="https://api.original-software.project1.company/media/files/frame-1af52c1ee1ad04a098aa8a13d0e8d5621.png"
+                  style="
+                    max-width: 100%;
+                    height: auto;
+                    margin-left: auto;
+                    margin-right: auto;
+                  "
+                />
+              </td>
+            </tr>
+            <tr>
+              <td
+                style="
+                  font-family: Arial, Helvetica, sans-serif;
+                  color: #111111;
+                  max-width: 400px;
+                "
+              >
+                <h2
+                  style="
+                    font-size: 20px;
+                    line-height: 28px;
+                    color: #000000;
+                    width: 100%;
+                    text-align: center;
+                    font-weight: 400;
+                  "
+                >
+                  إذا عندك أي استفسار أو تحتاج أي مساعدة إضافية،
+                  <br />
+                  لا تتردد بالتواصل مع فريق خدمة العملاء عبر الوسائل التالية:
+                  <br />
+                </h2>
+              </td>
+            </tr>
+
+            <!-- Footer -->
+            <tr>
+              <td>
+                <h1
+                  style="
+                    width: 80%;
+                    border-bottom: 2px solid #ffd600;
+                    height: 2px;
+                    margin-left: auto;
+                    margin-right: auto;
+                  "
+                ></h1>
+              </td>
+            </tr>
+            <tr>
+              <td
+                style="
+                  padding: 0px;
+                  font-family: Arial, sans-serif;
+                  text-align: center;
+                "
+              >
+                <table
+                  style="
+                    width: 80%;
+                    font-family: Arial, sans-serif;
+                    font-size: 15px;
+                    margin-left: auto;
+                    margin-right: auto;
+                  "
+                >
+                  <tr>
+                    <td style="vertical-align: top; width: 50%; color: #444">
+                      <h6
+                        style="
+                          margin: 0px;
+                          font-size: 12px;
+                          text-align: left;
+                          display: flex;
+                          margin-bottom: 4px;
+                        "
+                      >
+                        <span
+                          style="
+                            background: #ffd600;
+                            border-radius: 4px;
+                            display: flex;
+                            width: 14px;
+                            height: 14px;
+                            margin-right: 4px;
+                          "
+                        >
+                          <img
+                            src="https://api.original-software.project1.company/media/files/location618f86444a134542b5c02ec912fe7100.png"
+                            alt="Phone Icon"
+                            style="
+                              width: 12px;
+                              height: 12px;
+                              margin-left: auto;
+                              margin-right: auto;
+                              margin-top: auto;
+                              margin-bottom: auto;
+                            "
+                          />
+                        </span>
+                        KRO st, Duhok, Iraq
+                      </h6>
+
+                      <h6
+                        style="
+                          margin: 0px;
+                          font-size: 12px;
+                          text-align: left;
+                          display: flex;
+                          margin-bottom: 4px;
+                        "
+                      >
+                        <span
+                          style="
+                            background: #ffd600;
+                            border-radius: 4px;
+                            display: flex;
+                            width: 14px;
+                            height: 14px;
+                            margin-right: 4px;
+                          "
+                          ><img
+                            src="https://api.original-software.project1.company/media/files/facebookb77fe5d4c73f41ff8a289aa7a69f1baf.png"
+                            alt="Phone Icon"
+                            style="
+                              width: 12px;
+                              height: 12px;
+                              margin-left: auto;
+                              margin-right: auto;
+                              margin-top: auto;
+                              margin-bottom: auto;
+                            "
+                          />
+                        </span>
+                        @OriginalSoftware1
+                      </h6>
+                      <h6
+                        style="
+                          margin: 0px;
+                          font-size: 12px;
+                          text-align: left;
+                          display: flex;
+                          margin-bottom: 4px;
+                        "
+                      >
+                        <span
+                          style="
+                            background: #ffd600;
+                            border-radius: 4px;
+                            display: flex;
+                            width: 14px;
+                            height: 14px;
+                            margin-right: 4px;
+                          "
+                        >
+                          <img
+                            src="https://api.original-software.project1.company/media/files/instagramca0d9a8f06e24c31a839031a84fed70b.png"
+                            alt="Phone Icon"
+                            style="
+                              width: 12px;
+                              height: 12px;
+                              margin-left: auto;
+                              margin-right: auto;
+                              margin-top: auto;
+                              margin-bottom: auto;
+                            "
+                          />
+                        </span>
+                        @original.software2019
+                      </h6>
+                      <h6
+                        style="
+                          margin: 0px;
+                          font-size: 12px;
+                          text-align: left;
+                          display: flex;
+                          margin-bottom: 4px;
+                        "
+                      >
+                        <span
+                          style="
+                            background: #ffd600;
+                            border-radius: 4px;
+                            display: flex;
+                            width: 14px;
+                            height: 14px;
+                            margin-right: 4px;
+                          "
+                          ><img
+                            src="https://api.original-software.project1.company/media/files/whatsapp33b58ff13dba4c22a31d9df16dd0b36b.png"
+                            alt="Phone Icon"
+                            style="
+                              width: 12px;
+                              height: 12px;
+                              margin-left: auto;
+                              margin-right: auto;
+                              margin-top: auto;
+                              margin-bottom: auto;
+                            "
+                          />
+                        </span>
+                        +964 777 404 1441
+                      </h6>
+                      <h6
+                        style="
+                          margin: 0px;
+                          font-size: 12px;
+                          text-align: left;
+                          display: flex;
+                        "
+                      >
+                        <span
+                          style="
+                            background: #ffd600;
+                            border-radius: 4px;
+                            display: flex;
+                            width: 14px;
+                            height: 14px;
+                            margin-right: 4px;
+                          "
+                        >
+                          <img
+                            src="https://api.original-software.project1.company/media/files/emaild3a54ed5db7c4b4aa3bf56737de343fc.png"
+                            alt="Phone Icon"
+                            style="
+                              width: 12px;
+                              height: 12px;
+                              margin-left: auto;
+                              margin-right: auto;
+                              margin-top: auto;
+                              margin-bottom: auto;
+                            "
+                          />
+                        </span>
+                        shop@original-software.com
+                      </h6>
+                    </td>
+                    <td
+                      style="
+                        vertical-align: top;
+                        width: 50%;
+                        color: #444;
+                        text-align: left;
+                      "
+                    >
+                      <h4
+                        style="margin: 0px; font-size: 15px; text-align: left"
+                      >
+                        🕘 Business Hours:
+                        <br />
+                        <span style="height: 4px; display: block"></span>
+                        Saturday to Thursday: 9:00 AM – 12:00 AM
+                        <br />
+                        <span style="height: 4px; display: block"></span>
+                        Friday: <b>10:00 AM – 12:00 AM</b>
+                      </h4>
+                    </td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+          </table>
+
+          <!-- RTL example: wrap a block in dir="rtl" when needed -->
+          <!--
+          <table dir="rtl" role="presentation" cellpadding="0" cellspacing="0" border="0" width="600" style="background:#ffffff; margin-top:12px;">
+            <tr><td style="padding:16px; font-family:Tahoma, Arial; text-align:right;">مرحبا!</td></tr>
+          </table>
+          -->
+        </td>
+      </tr>
+    </table>
+    <!-- en -->
+    <table
+      role="presentation"
+      aria-hidden="true"
+      cellpadding="0"
+      cellspacing="0"
+      width="100%"
+      style="background: #f5f7fa"
+    >
+      <tr>
+        <td style="padding: 24px; align-items: center; align-self: center">
+          <table
+            role="presentation"
+            class="container"
+            cellpadding="0"
+            cellspacing="0"
+            width="800"
+            style="
+              border: 0px;
+              width: 800px;
+              max-width: 800px;
+              background: #ffffff;
+              border-collapse: collapse;
+              padding-bottom: 20px;
+              margin-left: auto;
+              margin-right: auto;
+            "
+          >
+            <tr>
+              <td style="text-align: center; align-content: center">
+                <img
+                  src="https://api.original-software.project1.company/media/files/copyd70ea9753d464fb29d21be32221585b7.png"
+                  width="400"
+                  height="400"
+                  alt="Company"
+                  style="
+                    display: block;
+                    width: 400px;
+                    height: auto;
+                    border: 0;
+                    outline: none;
+                    text-decoration: none;
+                    margin-left: auto;
+                    margin-right: auto;
+                  "
+                />
+              </td>
+            </tr>
+            <tr>
+              <td
+                class="p-24"
+                style="
+                  padding: 24px;
+                  font-family: Arial, Helvetica, sans-serif;
+                  color: #111111;
+                "
+              >
+                <h1
+                  style="
+                    margin: 0 0 12px;
+                    font-size: 34px;
+                    line-height: 28px;
+                    font-weight: bold;
+                    color: #c18d56;
+                    width: 100%;
+                    text-align: center;
+                  "
+                >
+                  Your Order Has Been Received
+                </h1>
+              </td>
+            </tr>
+            <tr>
+              <td class="p-24" style="padding: 24px">
+                <table
+                  role="presentation"
+                  width="100%"
+                  cellpadding="0"
+                  cellspacing="0"
+                  style="border: 0px; width: 100%; max-width: 100%"
+                >
+                  <tr>
+                    <td
+                      class="stack"
+                      width="50%"
+                      valign="top"
+                      style="
+                        font-family: Arial, Helvetica, sans-serif;
+                        color: #111111;
+                        padding-right: 12px;
+                      "
+                    >
+                      <h2
+                        style="
+                          margin: 0 0 8px;
+                          font-size: 28px;
+                          line-height: 24px;
+                          margin-left: 100px;
+                        "
+                      >
+                        Hello {{ username }},
+                      </h2>
+                    </td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+
+            <tr>
+              <td
+                style="
+                  padding-top: 12px;
+                  font-family: Arial, Helvetica, sans-serif;
+                  color: #111111;
+                  max-width: 400px;
+                "
+              >
+                <h2
+                  style="
+                    margin: 0 0 12px;
+                    font-size: 20px;
+                    line-height: 28px;
+
+                    color: #000000;
+                    width: 100%;
+                    text-align: center;
+                    font-weight: 400;
+                  "
+                >
+                  Thank you for choosing Original Software.
+                  <br />
+                  We’re pleased to inform you that your order has been
+                  successfully received
+                </h2>
+              </td>
+            </tr>
+            <tr>
+              <td
+                style="
+                  font-family: Arial, Helvetica, sans-serif;
+                  color: #111111;
+                  max-width: 400px;
+                "
+              >
+                <h2
+                  style="
+                    font-size: 20px;
+                    line-height: 28px;
+                    color: #000000;
+                    text-align: center;
+                    font-weight: 400;
+                    margin-bottom: 5px;
+                    padding-left: 40px;
+                    padding-right: 40px;
+                  "
+                >
+                  Our team is currently reviewing the details to ensure
+                  <br />
+                  you get the original product with the highest quality.
+                </h2>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <table>
+                  <tr>
+                    <td>
+                      <h4
+                        style="
+                          margin-left: 130px;
+                          font-size: 24px;
+                          margin-top: 30px;
+                          margin-bottom: 10px;
+                        "
+                      >
+                        Order Summary:
+                      </h4>
+                    </td>
+                  </tr>
+                  {% for item in order_lines %}
+                  <tr>
+                    <td style="margin-left: 130px; font-size: 20px">
+                      <!-- make each one a full line -->
+                      <h4 style="margin: 5px; margin-left: 130px">
+                        Product Name: {{ item.product.name }}
+                      </h4>
+                      <h4 style="margin: 5px; margin-left: 130px">
+                        Status: Under Review
+                      </h4>
+                    </td>
+                  </tr>
+                  {% endfor %}
+                </table>
+              </td>
+            </tr>
+
+            <tr>
+              <td
+                style="
+                  font-family: Arial, Helvetica, sans-serif;
+                  color: #111111;
+                  max-width: 400px;
+                "
+              >
+                <h2
+                  style="
+                    font-size: 20px;
+                    line-height: 28px;
+                    color: #000000;
+                    width: 100%;
+                    text-align: center;
+                    font-weight: 400;
+                  "
+                >
+                  Once the payment is confirmed and the order is processed,
+                  <br />
+                  your activation key and detailed installation instructions
+                  will
+                  <br />
+                  be available in your account under the “My Orders” section.
+                </h2>
+              </td>
+            </tr>
+
+            <tr>
+              <td
+                style="
+                  font-family: Arial, Helvetica, sans-serif;
+                  color: #111111;
+                  direction: rtl;
+                  max-width: 400px;
+                  margin-left: auto;
+                  margin-right: auto;
+                  display: flex;
+                  margin-top: 40px;
+                "
+              >
+                <img
+                  src="https://api.original-software.project1.company/media/files/frame-2511e63c95f2d4c23b6317a568b38c9f7.png"
+                  style="
+                    max-width: 100%;
+                    height: auto;
+                    margin-left: auto;
+                    margin-right: auto;
+                  "
+                />
+              </td>
+            </tr>
+            <tr>
+              <td
+                style="
+                  font-family: Arial, Helvetica, sans-serif;
+                  color: #111111;
+                  max-width: 400px;
+                "
+              >
+                <h2
+                  style="
+                    font-size: 20px;
+                    line-height: 28px;
+                    color: #000000;
+                    width: 100%;
+                    text-align: center;
+                    font-weight: 400;
+                  "
+                >
+                  For any questions or assistance, contact us:
+                  <br />
+                </h2>
+              </td>
+            </tr>
+
+            <!-- Footer -->
+            <tr>
+              <td>
+                <h1
+                  style="
+                    width: 80%;
+                    border-bottom: 2px solid #ffd600;
+                    height: 2px;
+                    margin-left: auto;
+                    margin-right: auto;
+                  "
+                ></h1>
+              </td>
+            </tr>
+            <tr>
+              <td
+                style="
+                  padding: 0px;
+                  font-family: Arial, sans-serif;
+                  text-align: center;
+                "
+              >
+                <table
+                  style="
+                    width: 80%;
+                    font-family: Arial, sans-serif;
+                    font-size: 15px;
+                    margin-left: auto;
+                    margin-right: auto;
+                  "
+                >
+                  <tr>
+                    <td style="vertical-align: top; width: 50%; color: #444">
+                      <h6
+                        style="
+                          margin: 0px;
+                          font-size: 12px;
+                          text-align: left;
+                          display: flex;
+                          margin-bottom: 4px;
+                        "
+                      >
+                        <span
+                          style="
+                            background: #ffd600;
+                            border-radius: 4px;
+                            display: flex;
+                            width: 14px;
+                            height: 14px;
+                            margin-right: 4px;
+                          "
+                        >
+                          <img
+                            src="https://api.original-software.project1.company/media/files/location618f86444a134542b5c02ec912fe7100.png"
+                            alt="Phone Icon"
+                            style="
+                              width: 12px;
+                              height: 12px;
+                              margin-left: auto;
+                              margin-right: auto;
+                              margin-top: auto;
+                              margin-bottom: auto;
+                            "
+                          />
+                        </span>
+                        KRO st, Duhok, Iraq
+                      </h6>
+
+                      <h6
+                        style="
+                          margin: 0px;
+                          font-size: 12px;
+                          text-align: left;
+                          display: flex;
+                          margin-bottom: 4px;
+                        "
+                      >
+                        <span
+                          style="
+                            background: #ffd600;
+                            border-radius: 4px;
+                            display: flex;
+                            width: 14px;
+                            height: 14px;
+                            margin-right: 4px;
+                          "
+                          ><img
+                            src="https://api.original-software.project1.company/media/files/facebookb77fe5d4c73f41ff8a289aa7a69f1baf.png"
+                            alt="Phone Icon"
+                            style="
+                              width: 12px;
+                              height: 12px;
+                              margin-left: auto;
+                              margin-right: auto;
+                              margin-top: auto;
+                              margin-bottom: auto;
+                            "
+                          />
+                        </span>
+                        @OriginalSoftware1
+                      </h6>
+                      <h6
+                        style="
+                          margin: 0px;
+                          font-size: 12px;
+                          text-align: left;
+                          display: flex;
+                          margin-bottom: 4px;
+                        "
+                      >
+                        <span
+                          style="
+                            background: #ffd600;
+                            border-radius: 4px;
+                            display: flex;
+                            width: 14px;
+                            height: 14px;
+                            margin-right: 4px;
+                          "
+                        >
+                          <img
+                            src="https://api.original-software.project1.company/media/files/instagramca0d9a8f06e24c31a839031a84fed70b.png"
+                            alt="Phone Icon"
+                            style="
+                              width: 12px;
+                              height: 12px;
+                              margin-left: auto;
+                              margin-right: auto;
+                              margin-top: auto;
+                              margin-bottom: auto;
+                            "
+                          />
+                        </span>
+                        @original.software2019
+                      </h6>
+                      <h6
+                        style="
+                          margin: 0px;
+                          font-size: 12px;
+                          text-align: left;
+                          display: flex;
+                          margin-bottom: 4px;
+                        "
+                      >
+                        <span
+                          style="
+                            background: #ffd600;
+                            border-radius: 4px;
+                            display: flex;
+                            width: 14px;
+                            height: 14px;
+                            margin-right: 4px;
+                          "
+                          ><img
+                            src="https://api.original-software.project1.company/media/files/whatsapp33b58ff13dba4c22a31d9df16dd0b36b.png"
+                            alt="Phone Icon"
+                            style="
+                              width: 12px;
+                              height: 12px;
+                              margin-left: auto;
+                              margin-right: auto;
+                              margin-top: auto;
+                              margin-bottom: auto;
+                            "
+                          />
+                        </span>
+                        +964 777 404 1441
+                      </h6>
+                      <h6
+                        style="
+                          margin: 0px;
+                          font-size: 12px;
+                          text-align: left;
+                          display: flex;
+                        "
+                      >
+                        <span
+                          style="
+                            background: #ffd600;
+                            border-radius: 4px;
+                            display: flex;
+                            width: 14px;
+                            height: 14px;
+                            margin-right: 4px;
+                          "
+                        >
+                          <img
+                            src="https://api.original-software.project1.company/media/files/emaild3a54ed5db7c4b4aa3bf56737de343fc.png"
+                            alt="Phone Icon"
+                            style="
+                              width: 12px;
+                              height: 12px;
+                              margin-left: auto;
+                              margin-right: auto;
+                              margin-top: auto;
+                              margin-bottom: auto;
+                            "
+                          />
+                        </span>
+                        shop@original-software.com
+                      </h6>
+                    </td>
+                    <td
+                      style="
+                        vertical-align: top;
+                        width: 50%;
+                        color: #444;
+                        text-align: left;
+                      "
+                    >
+                      <h4
+                        style="margin: 0px; font-size: 15px; text-align: left"
+                      >
+                        🕘 Business Hours:
+                        <br />
+                        <span style="height: 4px; display: block"></span>
+                        Saturday to Thursday: 9:00 AM – 12:00 AM
+                        <br />
+                        <span style="height: 4px; display: block"></span>
+                        Friday: <b>10:00 AM – 12:00 AM</b>
+                      </h4>
+                    </td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+          </table>
+
+          <!-- RTL example: wrap a block in dir="rtl" when needed -->
+          <!--
+          <table dir="rtl" role="presentation" cellpadding="0" cellspacing="0" border="0" width="600" style="background:#ffffff; margin-top:12px;">
+            <tr><td style="padding:16px; font-family:Tahoma, Arial; text-align:right;">مرحبا!</td></tr>
+          </table>
+          -->
+        </td>
+      </tr>
+    </table>
+  </body>
+</html>

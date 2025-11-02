@@ -1,0 +1,58 @@
+name: Deploy to Web Server
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Setup SSH
+        run: |
+          mkdir -p ~/.ssh
+          echo "${{ secrets.SSH_PRIVATE_KEY }}" > ~/.ssh/id_rsa
+          chmod 600 ~/.ssh/id_rsa
+          ssh-keyscan "${{ secrets.SERVER_HOST }}" >> ~/.ssh/known_hosts
+        env:
+          SSH_AUTH_SOCK: /tmp/ssh_agent.sock
+
+      - name: Install SSH agent
+        run: |
+          eval `ssh-agent -s`
+          ssh-add ~/.ssh/id_rsa
+          sleep 1  # Add a delay to ensure the key is loaded
+        env:
+          SSH_AUTH_SOCK: /tmp/ssh_agent.sock
+
+      # - name: Debug PATH
+      #   run: |
+      #     echo "PATH is: $PATH"
+      #     echo "HOME is: $HOME"
+      #   env:
+      #     SSH_AUTH_SOCK: /tmp/ssh_agent.sock
+
+      # - name: Update PATH
+      #   run: echo "export PATH=/home/hayder/.local/bin:/home/hayder/.nvm/versions/node/v16.20.1/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/home/hayder/.dotnet/tools:/root/.local/bin:/home/hayder/.dotnet/tools" >> $GITHUB_ENV # Replace with actual path
+
+      - name: Deploy code
+        run: |
+          ssh "${{ secrets.SERVER_USER }}@${{ secrets.SERVER_HOST }}" << 'EOF'
+            # Ensure the PATH includes necessary directories
+            export PATH="/usr/local/bin:/usr/bin:/bin:$PATH"
+            
+            # Navigate to project directory
+            cd ${{ secrets.SERVER_PATH }}
+            
+            # Pull the latest changes
+            git pull origin main
+
+            bash deploy.sh
+          EOF
+        env:
+          SSH_AUTH_SOCK: /tmp/ssh_agent.sock
